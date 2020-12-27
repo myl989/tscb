@@ -1,52 +1,24 @@
-import os
-import os.path
-from splitaudio import SplitWavAudio
-import speech_recognition as sr
+from api import tscb
 
-print(sr.__version__)
-r = sr.Recognizer()
+api = tscb()
 
-files = None
+print("Type 'end' to end")
 
 while (True):
   s = input('> ')
   splitter = None
 
   if s.startswith('init '):
-    try:
-      splitter = SplitWavAudio('resources', s[5:])
-    except:
-      print('Please enter an valid audio file name.')
-    files = splitter.multiple_split(1)
-    print(files)
+    api.setup(s[5:])
 
   elif s == 'purge':
-    for root, dirs, files in os.walk("resources/tmp"):
-      for file in files:
-        os.remove(os.path.join(root, file))
+    api.purge()
 
   elif s == 'transcribe':
-    str = ''
-    if files == None:
-      print('Be sure to initialize the file first!')
-    else:
-      for file in files:
-        audio_file = sr.AudioFile(file)
-        with audio_file as source:
-          audio = r.record(source)
-        str += r.recognize_google(audio)
-    print(str)
+    print(api.transcribe())
   
   elif s == 'end':
     break
   
   else:
     print('Feature not supported')
-
-#audio_file = sr.AudioFile('Alex.wav')
-
-#with audio_file as source:
-   #audio = r.record(source)
-
-#print(type(audio))
-#print(r.recognize_google(audio))
