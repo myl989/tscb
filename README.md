@@ -7,7 +7,7 @@ List of the commands:
 Initialises the audio by splitting it into 1-minute-sized chunks.
 
 **`transcribe`**
-Transcribes the text using Google Transcribe API.
+Transcribes to text using Google Transcribe API.
 
 **`purge`**
 Deletes the audio chunks.
