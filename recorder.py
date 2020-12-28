@@ -5,7 +5,7 @@ class Recorder():
   def __init__(self, frequency, recordinglength):
     """
     Makes a recorder class for recording audio.
-    :param frequency: The desired frequency of the audio
+    :param frequency: The desired sampling frequency of the audio in Hz
     :param recordinglength: The length of the recording in seconds
     """
     self.freq = frequency
