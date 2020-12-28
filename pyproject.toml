@@ -8,6 +8,8 @@ authors = ["Your Name <you@example.com>"]
 python = "^3.8"
 pydub = "^0.24.1"
 SpeechRecognition = "^3.8.1"
+sounddevice = "^0.4.1"
+wavio = "^0.0.4"
 
 [tool.poetry.dev-dependencies]
 

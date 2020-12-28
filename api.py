@@ -3,7 +3,7 @@ import os.path
 from splitaudio import SplitWavAudio
 import speech_recognition as sr
 
-class tscb():
+class Tscb():
 
   def __init__(self):
       self.tmp = None

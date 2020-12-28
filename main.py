@@ -1,6 +1,8 @@
-from api import tscb
+from api import Tscb
+from recorder import Recorder
 
-api = tscb()
+api = Tscb()
+recorder = Recorder(44100, 10)
 
 print("Type 'end' to end")
 
@@ -16,6 +18,9 @@ while (True):
 
   elif s == 'transcribe':
     print(api.transcribe())
+
+  elif s == 'record':
+    recorder.record()
   
   elif s == 'end':
     break
