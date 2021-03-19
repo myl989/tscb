@@ -22,7 +22,7 @@ List of commands in *`Recorder`*:
 Creates a *`Recorder`* instance with the desired sampling frequency in Hz and length of recording in seconds.
 
 **`record`**
-Records a file of the selected frequency and recording length to the `resources` folder.
+Records a file of the selected frequency and recording length to the `resources` folder. Returns the file name.
 
 The *`Rtel`* class stands for "record transcribe evaluate loop", a class for push-to-talk voice recognition.
 
