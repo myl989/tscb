@@ -17,7 +17,6 @@ class Rtel:
     self.num = 0
     self.passto = print #function
     self.exitcommand = None  #string
-    self.purgesetting = 0
     self.exitcmdhandlesetting = 0
     self.exitinput = None #function
     self.lengthinput = input #function
@@ -40,9 +39,6 @@ class Rtel:
   
   def exitComandHandelingMethodSetting(self, setting):
     self.exitcmdhandlesetting = setting
-
-  def purgeSetting(self, setting):
-    self.purgesetting = setting
 
   def lengthInput(self, function):
     """
