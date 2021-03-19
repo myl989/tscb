@@ -16,8 +16,8 @@ class SplitWavAudio():
         t1 = from_min * 60 * 1000
         t2 = to_min * 60 * 1000
         split_audio = self.audio[t1:t2]
-        split_audio.export(self.folder + '/tmp/' + split_filename, format="wav")
-        return (self.folder + '/tmp/' + split_filename)
+        split_audio.export(self.folder + '/' + split_filename, format="wav")
+        return (self.folder + '/' + split_filename)
         
     def multiple_split(self, min_per_split):
         files = []

@@ -6,7 +6,15 @@ import speech_recognition as sr
 class Tscb():
 
   def __init__(self):
-      self.tmp = None
+    self.tmp = None
+    self.audiofolder = 'resources'
+    self.chunkfolder = 'resources/tmp'
+  
+  def setAudioFolder(self, folder):
+    self.audiofolder = folder
+  
+  def setChunkFolder(self, folder):
+    self.chunkfolder = folder
 
   def setup(self, f):
     """
@@ -14,7 +22,7 @@ class Tscb():
     :param f: The location of the transcription
     """
     try:
-      splitter = SplitWavAudio('resources', f)
+      splitter = SplitWavAudio(self.chunkfolder, f)
     except:
       print('Please enter an valid audio file name.')
     self.tmp = splitter.multiple_split(1)
@@ -24,7 +32,7 @@ class Tscb():
     """
     Deletes the audio chunks.
     """
-    for root, dirs, files in os.walk("resources/tmp"):
+    for root, dirs, files in os.walk(self.chunkfolder):
       for file in files:
         os.remove(os.path.join(root, file))
     self.tmp = None

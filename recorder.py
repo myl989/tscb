@@ -11,9 +11,20 @@ class Recorder():
     self.freq = frequency
     self.rlen = recordinglength
     self.num = 0
+    self.folder = "resources"
+    self.prefix = "r"
+  
+  def setPrefix(self, p):
+    self.prefix = p
+  
+  def setFolder(self, f):
+    self.folder = f
+
+  def setRecordingLength(self, length):
+    self.rlen = length
 
   def record(self):
     recording = sd.rec(int(self.rlen * self.freq), samplerate = self.freq, channels = 2)
     sd.wait()
-    wv.write("resources/r" + self.num + ".wav", recording, self.freq, sampwidth = 2)
+    wv.write(self.folder + "/" + self.prefix + self.num + ".wav", recording, self.freq, sampwidth = 2)
     self.num = self.num + 1
