@@ -54,17 +54,6 @@ Sets the transcriber instance to use. A default transcriber is used if never set
 **`injectRecorder [recorder]`**
 Sets the recorder instance to use. A default recorder is used if never set.
 
-List of settings constants for the purgeSetting:
-
-**`KEEP` (default)**
-Do not purge any buffered audio files.
-
-**`PURGE_ON_EXIT`**
-The buffered audio files will be purged when the loop ends.
-
-**`PURGE_AFTER_TRANSCRIBED`**
-The buffered audio files will be purged after each transcription.
-
 List of settings constants for the exitComandHandelingMethodSetting:
 
 **`EXIT_IMMEDIATELY` (default)**
