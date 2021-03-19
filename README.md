@@ -36,9 +36,6 @@ The transcribed text is passed to this function. The default passTo is print.
 **`setExitCommand [command]`**
 If the transcribed text is equal to this text, the loop ends.
 
-**`purgeSetting [setting]`**
-Sets what the program will do with the generated audio files. See the constants section below for the settings.
-
 **`exitComandHandelingMethodSetting [setting]`**
 Sets how the the exit command will be handled. See the constants section below for the settings.
 
