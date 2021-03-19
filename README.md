@@ -1,6 +1,6 @@
 Transcription tutorial:
 
-To use, first place the audio file in a WAV format into the `resources` folder. Then, run `init [file_name].wav` to initialize the transcriber. Finally, run `transcribe` to transcribe the text. To transcribe another piece of text, run `purge`, and replace the .wav file, and repeat the processes.
+To use, first place the audio file in a WAV format into the `resources` folder. Then, run `init [file_name].wav` to initialize the transcriber. Finally, run `transcribe` to transcribe the text. To transcribe another piece of text, run `purge`, and replace the .wav file, and repeat the processes. You can customize the source or buffer directory using setter methods.
 
 List of commands in *`Tscb`*:
 **`init [file_name].wav`**
