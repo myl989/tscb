@@ -1,15 +1,5 @@
 from api import Tscb
 from recorder import Recorder
-'''
-Parameters used for settings on what the program will do with the generated audio files.
-0 indicates nothing.
-1 indicates buffered audio files will be removed on exit.
-2 indicates each buffered audio file will be removed after transcribed.
-The default setting is 0.
-'''
-KEEP = 0
-PURGE_ON_EXIT = 1
-PURGE_AFTER_TRANSCRIBED = 2
 
 '''
 Parameters used for settings on how the exitcommand will be handeled.
@@ -87,7 +77,8 @@ class Rtel:
           break
       length = int(self.lengthinput())
       self.recorder.setRecordingLength(length)
-      self.recorder.record()
+      f = self.recorder.record()
+      self.transcriber.setup(f)
       s = self.transcriber.transcribe()
       if self.exitcommand is not None and self.exitcmdhandlesetting == EXIT_IMMEDIATELY:
         if s == self.exitcommand:
@@ -96,7 +87,4 @@ class Rtel:
       if self.exitcommand is not None and self.exitcmdhandlesetting == PASS_THEN_EXIT:
         if s == self.exitcommand:
           break
-      if self.purgesetting == PURGE_AFTER_TRANSCRIBED:
-        self.transcriber.purge() 
-    if self.purgesetting == PURGE_ON_EXIT:
-      self.transcriber.purge()
+      self.transcriber.purge() 

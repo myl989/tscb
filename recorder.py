@@ -28,3 +28,4 @@ class Recorder():
     sd.wait()
     wv.write(self.folder + "/" + self.prefix + self.num + ".wav", recording, self.freq, sampwidth = 2)
     self.num = self.num + 1
+    return self.prefix + self.num + ".wav"
