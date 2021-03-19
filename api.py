@@ -39,7 +39,7 @@ class Tscb():
 
   def transcribe(self):
     """
-    Transcribes all files in folder to text using Google Transcribe API.
+    Transcribes to text using Google Transcribe API.
     """
     r = sr.Recognizer()
     str = ''
