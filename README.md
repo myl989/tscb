@@ -56,19 +56,19 @@ Sets the recorder instance to use. A default recorder is used if never set.
 
 List of settings constants for the purgeSetting:
 
-**KEEP** (default)
+**`KEEP` (default)**
 Do not purge any buffered audio files.
 
-**PURGE_ON_EXIT**
+**`PURGE_ON_EXIT`**
 The buffered audio files will be purged when the loop ends.
 
-**PURGE_AFTER_TRANSCRIBED**
+**`PURGE_AFTER_TRANSCRIBED`**
 The buffered audio files will be purged after each transcription.
 
 List of settings constants for the exitComandHandelingMethodSetting:
 
-**EXIT_IMMEDIATELY** (default)
+**`EXIT_IMMEDIATELY` (default)**
 When the exit command is detected, exit immediately.
 
-**PASS_THEN_EXIT**
+**`PASS_THEN_EXIT`**
 Always pass the command to passTo first before deciding to exit.
