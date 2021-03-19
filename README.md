@@ -4,7 +4,7 @@ To use, first place the audio file in a WAV format into the `resources` folder. 
 
 List of commands in *`Tscb`*:
 **`init [file_name].wav`**
-Initialises the audio by splitting it into 1-minute-sized chunks.
+Initialises the audio by splitting it into 1-minute-sized chunks. This is to comply with the Google API's regulations.
 
 **`transcribe`**
 Transcribes to text using Google Transcribe API.
